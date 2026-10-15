@@ -1,0 +1,1770 @@
+-- 67NSK OPEN SOURCE (the original is obfuscated)--
+
+local v1 = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+local t1 = {
+	Run = "Survivor",
+	Walk = "Survivor",
+	Idle = "Survivor",
+}
+local t2 = {
+	"Survivor",
+	"SurvivorHurt",
+	"Retro",
+	"RetroHurt",
+	"Dussekar",
+	"DussekarHurt",
+	"Noli",
+	"John Doe",
+	"Slasher",
+	"1x1x1x1",
+	"c00lkidd",
+	"Stalker/Dog",
+	"HacklordShed",
+	"MeQuot",
+}
+local t3 = {
+	Run = {
+		Survivor = "rbxassetid://136252471123500",
+		SurvivorHurt = "rbxassetid://115946474977409",
+		Retro = "rbxassetid://99159420513149",
+		RetroHurt = "rbxassetid://133312964070618",
+		Dussekar = "rbxassetid://125869734469543",
+		DussekarHurt = "rbxassetid://71505511479171",
+		Noli = "rbxassetid://117451341682452",
+		["John Doe"] = "rbxassetid://132653655520682",
+		Slasher = "rbxassetid://93054787145505",
+		["1x1x1x1"] = "rbxassetid://106485518413331",
+		c00lkidd = "rbxassetid://96571077893813",
+		["Stalker/Dog"] = "rbxassetid://109671225388655",
+		HacklordShed = "rbxassetid://85339002634979",
+		MeQuot = "rbxassetid://133340430702728",
+	},
+	Walk = {
+		Survivor = "rbxassetid://108018357044094",
+		SurvivorHurt = "rbxassetid://132377038617766",
+		Retro = "rbxassetid://99127941563341",
+		RetroHurt = "rbxassetid://75842556102864",
+		Dussekar = "rbxassetid://102812745115149",
+		DussekarHurt = "rbxassetid://138695523464886",
+		Noli = "rbxassetid://109700476007435",
+		["John Doe"] = "rbxassetid://81193817424328",
+		Slasher = "rbxassetid://93622022596108",
+		["1x1x1x1"] = "rbxassetid://109130982296927",
+		c00lkidd = "rbxassetid://18885906143",
+		["Stalker/Dog"] = "rbxassetid://108287960442206",
+		HacklordShed = "rbxassetid://119112338263474",
+		MeQuot = "rbxassetid://97792745378633",
+	},
+	Idle = {
+		Survivor = "rbxassetid://131082534135875",
+		SurvivorHurt = "rbxassetid://134624270247120",
+		Retro = "rbxassetid://124622205682529",
+		RetroHurt = "rbxassetid://126523253248611",
+		Dussekar = "rbxassetid://107756518054855",
+		DussekarHurt = "rbxassetid://138915609882599",
+		Noli = "rbxassetid://83465205704188",
+		["John Doe"] = "rbxassetid://105880087711722",
+		Slasher = "rbxassetid://116050994905421",
+		["1x1x1x1"] = "rbxassetid://138754221537146",
+		c00lkidd = "rbxassetid://18885903667",
+		["Stalker/Dog"] = "rbxassetid://135419935358802",
+		HacklordShed = "rbxassetid://106131211773069",
+		MeQuot = "rbxassetid://106151516153723",
+	},
+}
+local NSKTheme = getgenv().NSKTheme
+local NSKPing = getgenv().NSKPing
+local v7 = nil
+
+if NSKTheme then
+	local v8 = string.find(NSKTheme, "https://") and NSKTheme
+		or "https://raw.githubusercontent.com/scriptrblxs/PyyScripts/refs/heads/main/assets/67nskSkins/" .. NSKTheme
+
+	v7 = loadstring(game:HttpGet(v8))()
+end
+
+local v9 = v1:CreateWindow({
+	Name = "67nsk no key >:)",
+	Icon = 0,
+	LoadingTitle = "67nsk le sigmabroy (what?)",
+	LoadingSubtitle = "by aerialasf no key by TVdev",
+	ShowText = "67 (I CANT TAKE THIS MEME ANYMORE AAA)",
+	Theme = v7 or "Amethyst",
+	ToggleUIKeybind = Enum.KeyCode.F5,
+	DisableRayfieldPrompts = true,
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = "67nsk  hub",
+		FileName = "ch7_0",
+	},
+	Discord = {
+		Enabled = true,
+		Invite = "https://discord.gg/9REzNmRWXD",
+		RememberJoins = false,
+	},
+	KeySystem = false,
+	KeySettings = {
+		Title = "67nsk KEY??",
+		Subtitle = "(the key is actually not Forsake thee)",
+		Note = "its in the discord i think its in your clipboard HOLY SHIT IT RHYMES",
+		FileName = "SIGMASIGMASakenkeyLIGMALIGMAohmy67",
+		SaveKey = true,
+		GrabKeyFromSite = false,
+		Key = {
+			"Jarvis, run this script",
+			"Chat i think i got forsakened",
+		},
+	},
+})
+local v10 = v9:CreateTab("Animations", "a-large-small")
+local v11 = v9:CreateTab("Advantages", "a-arrow-up")
+local v12 = v9:CreateTab("Fun", "smile")
+local u13 = false
+local u14 = false
+local u15 = false
+local LocalPlayer = game.Players.LocalPlayer
+local RunService = game:GetService("RunService")
+
+v10:CreateToggle({
+	Name = "Jerking",
+	CurrentValue = false,
+	Flag = "HavingFunAnimationToggle",
+	Callback = function(p1)
+		u14 = p1
+	end,
+})
+v10:CreateToggle({
+	Name = "Invisibility",
+	CurrentValue = false,
+	Flag = "InvisToggle",
+	Callback = function(p2)
+		u15 = p2
+	end,
+})
+
+local Animation = Instance.new("Animation")
+
+Animation.AnimationId = "rbxassetid://72042024"
+
+local track = nil
+local u20 = nil
+local co = nil
+local PreRender = RunService.PreRender
+local u23 = LocalPlayer
+local u24 = Animation
+
+local function u25()
+	if not co or coroutine.status(co) == "dead" then
+		co = coroutine.create(function()
+			while u14 and track do
+				track:Play()
+				track:AdjustSpeed(0.65)
+				track:AdjustWeight(10)
+				track.TimePosition = 0.6
+				task.wait(0.1)
+
+				while track and track.IsPlaying and track.TimePosition < 0.65 do
+					task.wait(0.1)
+				end
+
+				if track and track.IsPlaying then
+					track.TimePosition = 0.6
+				end
+
+				task.wait(0.1)
+			end
+		end)
+		coroutine.resume(co)
+
+		return
+	end
+end
+
+PreRender:Connect(function()
+	if not u20 or (not u20.Parent or u20 ~= u23.Character) then
+		u20 = u23.Character or u23.CharacterAdded:Wait()
+
+		local Humanoid = u20:FindFirstChildWhichIsA("Humanoid")
+
+		if Humanoid then
+			track = (Humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", Humanoid)):LoadAnimation(u24)
+			track:AdjustWeight(20)
+		end
+	end
+
+	if track then
+		if not u14 then
+			if track and track.IsPlaying then
+				track:Stop()
+			end
+
+			co = nil
+
+			return
+		end
+
+		u25()
+
+		return
+	end
+end)
+
+local u26 = nil
+local u27 = nil
+local u28 = t3
+local u29 = t3
+local u30 = t1
+
+local function u31(p3, p4, p5, p6)
+	for _, v in pairs(p3:GetPlayingAnimationTracks()) do
+		if p4 == v.Animation.AnimationId then
+			v:AdjustSpeed(p6 or 1)
+
+			return v
+		end
+
+		for _, v2 in pairs(u28) do
+			for _, v3 in pairs(v2) do
+				if v3 == v.Animation.AnimationId then
+					v:Stop(0.2)
+				end
+			end
+		end
+	end
+
+	local Animation2 = Instance.new("Animation")
+
+	Animation2.Name = "hub67anm"
+	Animation2.AnimationId = p4
+
+	local track2 = p3:LoadAnimation(Animation2)
+
+	track2:AdjustWeight(p5 or 10)
+	track2:Play(0.2)
+
+	if p6 then
+		track2:AdjustSpeed(p6)
+	end
+
+	return track2
+end
+local function v32(p7)
+	if u26 then
+		u26:Disconnect()
+		u26 = nil
+	end
+
+	if u27 then
+		u27:Disconnect()
+		u27 = nil
+	end
+
+	local Humanoid = p7:WaitForChild("Humanoid")
+
+	if u13 then
+		if p7:FindFirstChild("Animate") then
+			p7.Animate.Enabled = false
+		end
+
+		u26 = Humanoid.AnimationPlayed:Connect(function(animation)
+			if u13 then
+				if animation.Animation.Name ~= "hub67anm" then
+					for _, v in pairs(u29) do
+						for _, v4 in pairs(v) do
+							if v4 == animation.Animation.AnimationId then
+								animation:Stop(0.2)
+
+								return
+							end
+						end
+					end
+
+					return
+				end
+
+				return
+			end
+		end)
+
+		local Running = Humanoid.Running
+		local u151 = Humanoid
+
+		u27 = Running:Connect(function(p8)
+			if u13 then
+				local Sprinting = require(game.ReplicatedStorage.Systems.Character.Game.Sprinting)
+				local IsSprinting = Sprinting.IsSprinting
+
+				if not (p8 > 0.01) then
+					local Idle = u30.Idle
+					local v343 = u29.Idle[Idle] or u29.Idle.Survivor
+
+					u31(u151, v343, 9, 1)
+
+					return
+				end
+
+				local v344 = IsSprinting and (u29.Run[u30.Run] or u29.Run.Survivor) or (u29.Walk[u30.Walk] or u29.Walk.Survivor)
+
+				u31(u151, v344, 10, p8 / (IsSprinting and Sprinting.SprintSpeed or 12))
+
+				return
+			end
+		end)
+
+		return
+	end
+
+	if p7:FindFirstChild("Animate") then
+		p7.Animate.Enabled = true
+	end
+end
+
+if LocalPlayer.Character then
+	v32(LocalPlayer.Character)
+end
+
+LocalPlayer.CharacterAdded:Connect(v32)
+
+local u33 = nil
+local PreSimulation = game:GetService("RunService").PreSimulation
+local u35 = LocalPlayer
+
+PreSimulation:Connect(function()
+	local Character = u35.Character
+
+	if not Character then
+		u33 = nil
+
+		return
+	end
+
+	local Humanoid = Character.Humanoid
+
+	if not u15 then
+		Character.HumanoidRootPart.Transparency = 1
+
+		for _, v in pairs(Humanoid:GetPlayingAnimationTracks()) do
+			if v.Animation.AnimationId == "rbxassetid://75804462760596" and v.Animation.Name == "nskInvis" then
+				v:Stop()
+				u33 = nil
+			end
+		end
+
+		return
+	end
+
+	if not u33 then
+		local Animation3 = Instance.new("Animation")
+
+		Animation3.AnimationId = "rbxassetid://75804462760596"
+		Animation3.Name = "nskInvis"
+		u33 = Character.Humanoid:LoadAnimation(Animation3)
+		u33.Looped = true
+		u33:Play()
+		u33:AdjustSpeed(0)
+	end
+
+	Character.HumanoidRootPart.Color = Character.Parent == workspace.Players.Killers and Color3.new(1, 0, 0) or Color3.fromRGB(66, 158, 245)
+	Character.HumanoidRootPart.Material = Enum.Material.Neon
+	Character.HumanoidRootPart.Transparency = 0.5
+	Character.HumanoidRootPart.TopSurface = Enum.SurfaceType.Smooth
+	Character.Torso.CanCollide = false
+end)
+LocalPlayer.CharacterAdded:Connect(function()
+	u33 = nil
+end)
+v10:CreateDivider()
+
+local t4 = {
+	Name = "Toggle Custom Animations",
+	CurrentValue = false,
+	Flag = "CustomAnimsToggle",
+}
+local u37 = LocalPlayer
+local u38 = v32
+
+function t4.Callback(p9)
+	u13 = p9
+
+	if u37.Character then
+		if p9 then
+			u38(u37.Character)
+
+			return
+		end
+
+		if u26 then
+			u26:Disconnect()
+			u26 = nil
+		end
+
+		if u27 then
+			u27:Disconnect()
+			u27 = nil
+		end
+
+		if u37.Character:FindFirstChild("Animate") then
+			u37.Character.Animate.Enabled = true
+		end
+
+		local Humanoid = u37.Character:FindFirstChildWhichIsA("Humanoid")
+
+		if Humanoid then
+			for _, v in pairs(Humanoid:GetPlayingAnimationTracks()) do
+				if v.Animation and v.Animation.Name == "hub67anm" then
+					v:Stop(0.25)
+				end
+			end
+		end
+	end
+end
+
+v10:CreateToggle(t4)
+
+local u39 = v10
+local u40 = t2
+local u41 = t1
+
+for _, v in ipairs({
+	"Run",
+	"Walk",
+	"Idle",
+}) do
+	(function(p10)
+		local v162 = u39
+		local t5 = {
+			Name = "Target " .. p10 .. " Animation",
+			Options = u40,
+			CurrentOption = {
+				u41[p10],
+			},
+			MultipleOptions = false,
+			Flag = p10 .. "AnimationFlag",
+		}
+		local u164 = p10
+
+		function t5.Callback(p11)
+			u41[u164] = p11[1]
+		end
+
+		v162:CreateDropdown(t5)
+	end)(v)
+end
+
+local u44 = false
+local u45 = false
+
+v10:CreateSection("Moveset Animations")
+v10:CreateToggle({
+	Name = "MeQuot Slasher Animations",
+	CurrentValue = false,
+	Flag = "slasher_mqslash",
+	Callback = function(p12)
+		u44 = p12
+	end,
+})
+v10:CreateToggle({
+	Name = "Hacklord Shedletsky Animations",
+	CurrentValue = false,
+	Flag = "onex_hacklordTOGGLE",
+	Callback = function(p13)
+		u45 = p13
+	end,
+})
+
+local u46 = false
+local u47 = false
+local n1 = 0.5
+local u49
+local u50 = false
+local u51 = false
+local n2 = 2.5
+local Part = Instance.new("Part")
+
+Part.Transparency = 1
+Part.Massless = true
+Part.Size = Vector3.new(20, 20, 20)
+Part.CanCollide = false
+Part.Parent = workspace
+
+local u54 = Part
+
+if LocalPlayer.Character then
+	local Character = LocalPlayer.Character
+	local Weld = Instance.new("Weld")
+
+	Weld.Part0 = Character.HumanoidRootPart
+	Weld.Part1 = Part
+	Weld.Parent = Character.HumanoidRootPart
+end
+
+LocalPlayer.CharacterAdded:Connect(function(character)
+	local Weld = Instance.new("Weld")
+
+	Weld.Part0 = character.HumanoidRootPart
+	Weld.Part1 = u54
+	Weld.Parent = character.HumanoidRootPart
+end)
+local u57
+local u58
+local u59 = false
+local n3 = 100
+local u61
+local u62 = false
+local u63 = false
+local color3 = Color3.new(1, 0, 0)
+local color3_2 = Color3.new(0, 1, 0)
+local color3_3 = Color3.new(1, 0.4, 0.6)
+local n4 = 0.5
+
+v11:CreateSection("Speed")
+v11:CreateToggle({
+	Name = "Infinite Stamina",
+	CurrentValue = false,
+	Flag = "InfStamToggle",
+	Callback = function(p14)
+		u46 = p14
+	end,
+})
+v11:CreateToggle({
+	Name = "Speedhack",
+	CurrentValue = false,
+	Flag = "SpeedToggle",
+	Callback = function(p15)
+		u47 = p15
+	end,
+})
+v11:CreateSlider({
+	Name = "Speed Amount",
+	Range = {
+		0,
+		5,
+	},
+	Increment = 0.5,
+	Suffix = "times 10 studs/second",
+	CurrentValue = 0.5,
+	Flag = "SpeedHaxAmount",
+	Callback = function(p16)
+		n1 = p16
+	end,
+})
+v11:CreateToggle({
+	Name = "Match Speed with Animation",
+	CurrentValue = true,
+	Flag = "MatchAnimationToggle",
+	Callback = function(p17)
+		u49 = p17
+	end,
+})
+v11:CreateSection("Generators")
+v11:CreateToggle({
+	Name = "Auto Generator",
+	CurrentValue = false,
+	Flag = "AutomaticGeneratorFix",
+	Callback = function(p18)
+		u50 = p18
+	end,
+})
+v11:CreateToggle({
+	Name = "Generators ESP",
+	CurrentValue = false,
+	Flag = "GeneratorESP",
+	Callback = function(p19)
+		u51 = p19
+	end,
+})
+v11:CreateSlider({
+	Name = "Auto Generator Interval",
+	Range = {
+		0.5,
+		20,
+	},
+	Increment = 0.05,
+	Suffix = "interval",
+	CurrentValue = 2.5,
+	Flag = "AutomaticGeneratorInterval",
+	Callback = function(p20)
+		n2 = p20
+	end,
+})
+v11:CreateLabel("Using an interval below 1.75 may get you banned/kicked!!", "message-square-warning", Color3.new(1, 1, 0), false)
+v11:CreateSection("Character")
+v11:CreateToggle({
+	Name = "Ultra Instinct (dodge killer m1s)",
+	CurrentValue = false,
+	Flag = "UltraInstinctToggle",
+	Callback = function(p21)
+		u57 = p21
+	end,
+})
+v11:CreateToggle({
+	Name = "Omni-directional Aiming",
+	CurrentValue = false,
+	Flag = "OmniDirAimingToggle",
+	Callback = function(p22)
+		u59 = p22
+	end,
+})
+v11:CreateSlider({
+	Name = "Omni-directional Move Speed",
+	Range = {
+		50,
+		200,
+	},
+	Increment = 25,
+	Suffix = "speed",
+	CurrentValue = 100,
+	Flag = "DirectionalAimingSpeed",
+	Callback = function(p23)
+		n3 = p23
+	end,
+})
+v11:CreateToggle({
+	Name = "Auto Entanglement Puzzle",
+	CurrentValue = false,
+	Flag = "AutoEntangleToggle",
+	Callback = function(p24)
+		u62 = p24
+	end,
+})
+v11:CreateToggle({
+	Name = "Walk Thru Killer Doors",
+	CurrentValue = false,
+	Flag = "KillerDoorsToggle",
+	Callback = function(p25)
+		u61 = p25
+	end,
+})
+v11:CreateDivider()
+v11:CreateToggle({
+	Name = "Auto Block Guest",
+	CurrentValue = false,
+	Flag = "GuestAutoBlockToggle",
+	Callback = function(p26)
+		u58 = p26
+	end,
+})
+game:GetService("RunService").PreSimulation:Connect(function()
+	if u62 then
+		game.ReplicatedStorage.Modules.Network.RemoteEvent:FireServer("Entangled", {})
+
+		return
+	end
+end)
+v11:CreateSection("ESP")
+v11:CreateToggle({
+	Name = "ESP",
+	CurrentValue = false,
+	Flag = "ESPToggle",
+	Callback = function(p27)
+		u63 = p27
+	end,
+})
+v11:CreateColorPicker({
+	Name = "Killer ESP Color",
+	Color = Color3.new(1, 0, 0),
+	Flag = "KillerColor",
+	Callback = function(p28)
+		color3 = p28
+	end,
+})
+v11:CreateColorPicker({
+	Name = "Survivor ESP Color",
+	Color = Color3.new(0, 1, 0),
+	Flag = "SurvivorColor",
+	Callback = function(p29)
+		color3_2 = p29
+	end,
+})
+v11:CreateColorPicker({
+	Name = "Item ESP Color",
+	Color = Color3.new(1, 0.4, 0.6),
+	Flag = "ItemColor",
+	Callback = function(p30)
+		color3_3 = p30
+	end,
+})
+v11:CreateSlider({
+	Name = "Highlight Transparency",
+	Range = {
+		0,
+		1,
+	},
+	Increment = 0.1,
+	Suffix = "transparency",
+	CurrentValue = 0.5,
+	Flag = "ESPTransparency",
+	Callback = function(p31)
+		n4 = p31
+	end,
+})
+
+local t6 = {
+	[8] = Enum.AccessoryType.Hat,
+	[41] = Enum.AccessoryType.Hair,
+	[42] = Enum.AccessoryType.Face,
+	[43] = Enum.AccessoryType.Neck,
+	[44] = Enum.AccessoryType.Shoulder,
+	[45] = Enum.AccessoryType.Front,
+	[46] = Enum.AccessoryType.Back,
+	[47] = Enum.AccessoryType.Waist,
+}
+local u69 = LocalPlayer
+local u70 = t6
+local t7 = {
+	Name = "Yourself Skin (visual)",
+}
+local u72 = LocalPlayer
+
+local function u73(p32, p33)
+	local Character = u69.Character
+
+	if Character then
+		local v190 = game:GetObjects(p32)[1]
+
+		v190.AccessoryType = u70[p33]
+
+		local Handle = v190:FindFirstChild("Handle")
+
+		if Handle then
+			local Attachment = Handle:FindFirstChildWhichIsA("Attachment", true)
+			local v193 = nil
+			local descendantParent = nil
+
+			if Attachment then
+				for _, descendant in ipairs(Character:GetDescendants()) do
+					if descendant:IsA("Attachment") and descendant.Name == Attachment.Name then
+						v193 = descendant
+						descendantParent = descendant.Parent
+
+						break
+					end
+				end
+			end
+
+			local Weld = Instance.new("Weld")
+
+			Weld.Part1 = Handle
+			Weld.Part0 = descendantParent or (Character:FindFirstChild("Torso") or Character:FindFirstChild("Head"))
+
+			if not v193 or not Attachment then
+				Weld.C0 = CFrame.new()
+				Weld.C1 = CFrame.new()
+			else
+				Weld.C0 = v193.CFrame
+				Weld.C1 = Attachment.CFrame
+			end
+
+			Weld.Parent = Handle
+			v190.Parent = Character
+
+			return v190
+		end
+
+		return
+	end
+end
+
+function t7.Callback()
+	local Character = u72.Character
+
+	if Character then
+		local v199 = Character:FindFirstChild("Body Colors", true)
+
+		for _, descendant in pairs(Character:GetDescendants()) do
+			if descendant:IsA("Accessory") or descendant:IsA("Hat") or descendant:IsA("Clothing") then
+				descendant:Destroy()
+			end
+		end
+
+		local CharacterAppearanceAsync = game.Players:GetCharacterAppearanceAsync(u72.UserId)
+		local CharacterAppearanceInfoAsync = game.Players:GetCharacterAppearanceInfoAsync(u72.UserId)
+		local Face = game.Players:GetHumanoidDescriptionFromUserId(u72.UserId).Face
+
+		if Face ~= 0 then
+			local ExpressionHolder = Character:FindFirstChild("ExpressionHolder")
+
+			if ExpressionHolder then
+				ExpressionHolder:Destroy()
+			end
+
+			local Decal = Instance.new("Decal")
+
+			Decal.Texture = "rbxassetid://" .. Face
+			Decal.Parent = Character.Head
+		end
+
+		for _, v in pairs(CharacterAppearanceInfoAsync.assets) do
+			if v.assetType.id == 8 or v.assetType.id >= 41 and v.assetType.id <= 47 then
+				u73("rbxassetid://" .. v.id, v.assetType.id)
+			end
+		end
+
+		for _, child in pairs(CharacterAppearanceAsync:GetChildren()) do
+			if child:IsA("Clothing") then
+				child.Parent = Character
+			end
+		end
+
+		local v211 = CharacterAppearanceAsync:FindFirstChild("Body Colors", true)
+
+		if v199 and v211 then
+			v199.HeadColor3 = v211.HeadColor3
+			v199.TorsoColor3 = v211.TorsoColor3
+			v199.LeftArmColor3 = v211.LeftArmColor3
+			v199.RightArmColor3 = v211.RightArmColor3
+			v199.LeftLegColor3 = v211.LeftLegColor3
+			v199.RightLegColor3 = v211.RightLegColor3
+		end
+
+		return
+	end
+end
+
+v12:CreateButton(t7)
+v12:CreateParagraph({
+	Title = "Warning",
+	Content = "Yourself will only work if you are using default skin or a skin that doesn't use 3D clothes! It may load a bit slow if you have bad internet. If it doesn't work, press again!",
+})
+
+local t8 = {
+	Name = "DoD-like Punch",
+}
+local u75 = RunService
+
+function t8.Callback(_)
+	local LocalPlayer2 = game.Players.LocalPlayer
+	local NetworkPing = LocalPlayer2:GetNetworkPing()
+	local Character = LocalPlayer2.Character
+	local u216 = nil
+	local u219 = LocalPlayer2
+	local u220 = NetworkPing
+
+	u216 = hookmetamethod(game, "__namecall", function(p35, ...)
+		getnamecallmethod()
+
+		local t9 = { ... }
+
+		if p35 == game.ReplicatedStorage.Modules.Network.RemoteEvent then
+			if u219.Character ~= Character then
+				return u216(p35, ...)
+			end
+
+			if t9[1] == "UseActorAbility" and buffer.tostring(t9[2][1]) == '"Punch"' then
+				local HumanoidRootPart = Character.HumanoidRootPart
+				local u349 = true
+				local spawn = task.spawn
+				local u351 = HumanoidRootPart
+
+				spawn(function()
+					task.wait(0.5)
+					u351.Anchored = true
+
+					while u349 do
+						u351.AssemblyLinearVelocity = u351.AssemblyLinearVelocity + (u351.CFrame.LookVector / NSKPing or u220)
+						task.wait(0.1)
+					end
+				end)
+
+				local PreSimulation2 = u75.PreSimulation
+				local u353 = HumanoidRootPart
+
+				PreSimulation2:Connect(function(p36)
+					if u349 then
+						local Position = u353.Position
+
+						Character:TranslateBy(Character.Humanoid.MoveDirection * 7 * p36)
+						u353.CFrame = CFrame.new(u353.Position) * CFrame.lookAt(Position, u353.Position).Rotation
+					end
+				end)
+
+				local delay = task.delay
+				local u355 = HumanoidRootPart
+
+				delay(1, function()
+					u355.AssemblyLinearVelocity = Vector3.zero
+					u355.Anchored = false
+					u349 = false
+				end)
+			end
+		end
+
+		if not suc then
+			warn(res)
+		end
+
+		return u216(p35, ...)
+	end)
+end
+
+v12:CreateButton(t8)
+game:GetService("RunService").PreSimulation:Connect(function()
+	local Sprinting = require(game.ReplicatedStorage.Systems.Character.Game.Sprinting)
+
+	Sprinting.SprintSpeed = 28
+
+	if not u46 then
+		Sprinting.StaminaLoss = 10
+		Sprinting.StaminaLossDisabled = false
+
+		return
+	end
+
+	Sprinting.StaminaLoss = 0
+	Sprinting.StaminaLossDisabled = true
+end)
+
+local PreSimulation3 = game:GetService("RunService").PreSimulation
+local u77 = LocalPlayer
+
+PreSimulation3:Connect(function(p37)
+	if u47 then
+		local Character = u77.Character
+
+		if Character then
+			local Humanoid = Character:FindFirstChildWhichIsA("Humanoid")
+
+			if not Humanoid or Humanoid.MoveDirection.Magnitude == 0 then
+				return
+			end
+
+			Character:TranslateBy(Humanoid.MoveDirection * (n1 * p37 * 10))
+		end
+
+		return
+	end
+end)
+
+local u78 = nil
+local _ = game.Players.LocalPlayer
+local Character = nil
+local Humanoid = nil
+local HumanoidRootPart = nil
+
+if LocalPlayer.Character then
+	Character = LocalPlayer.Character
+	Humanoid = Character:WaitForChild("Humanoid")
+	HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+	Humanoid.AnimationPlayed:Connect(function(animation)
+		local v227 = animation.Animation.AnimationId:match("%d+")
+
+		if u59 then
+			if v227 ~= "126896426760253" and v227 ~= "97167027849946" and v227 ~= "106776364623742" and v227 ~= "135884061951801" then
+				if
+					v227 == "131430497821198"
+					or v227 == "119181003138006"
+					or v227 == "100592913030351"
+					or v227 == "103601716322988"
+					or v227 == "76649505662612"
+					or v227 == "133491532453922"
+					or v227 == "81935774508746"
+				then
+					u78 = v227
+					anchorT = tick() + 2.8
+					HumanoidRootPart.Anchored = true
+
+					local Stopped = animation.Stopped
+					local u229 = v227
+
+					Stopped:Connect(function()
+						if u78 == u229 then
+							u78 = nil
+							HumanoidRootPart.Anchored = false
+						end
+					end)
+				end
+
+				return
+			end
+
+			u78 = "VR"
+			animation.Stopped:Connect(function()
+				if u78 == "VR" then
+					u78 = nil
+					HumanoidRootPart.Anchored = false
+				end
+			end)
+
+			return
+		end
+	end)
+end
+
+LocalPlayer.CharacterAdded:Connect(function(character)
+	Character = character
+	Humanoid = character:WaitForChild("Humanoid")
+	HumanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	Humanoid.AnimationPlayed:Connect(function(animation)
+		local v357 = animation.Animation.AnimationId:match("%d+")
+
+		if u59 then
+			if v357 ~= "126896426760253" and v357 ~= "97167027849946" and v357 ~= "106776364623742" and v357 ~= "135884061951801" then
+				if
+					v357 == "131430497821198"
+					or v357 == "119181003138006"
+					or v357 == "100592913030351"
+					or v357 == "103601716322988"
+					or v357 == "76649505662612"
+					or v357 == "133491532453922"
+					or v357 == "81935774508746"
+				then
+					u78 = v357
+					anchorT = tick() + 2.8
+					HumanoidRootPart.Anchored = true
+
+					local Stopped = animation.Stopped
+					local u359 = v357
+
+					Stopped:Connect(function()
+						if u78 == u359 then
+							u78 = nil
+							HumanoidRootPart.Anchored = false
+						end
+					end)
+				end
+
+				return
+			end
+
+			u78 = "VR"
+			animation.Stopped:Connect(function()
+				if u78 == "VR" then
+					u78 = nil
+					HumanoidRootPart.Anchored = false
+				end
+			end)
+
+			return
+		end
+	end)
+end)
+RunService.RenderStepped:Connect(function(_)
+	if u59 and u78 then
+		local CurrentCamera = workspace.CurrentCamera
+
+		if CurrentCamera then
+			if u78 ~= "VR" then
+				if not (tick() > anchorT) then
+					HumanoidRootPart.Anchored = true
+
+					local Unit = CurrentCamera.CFrame.LookVector.Unit
+
+					HumanoidRootPart.CFrame = CFrame.lookAt(HumanoidRootPart.Position, HumanoidRootPart.Position + Unit, Vector3.yAxis)
+
+					return
+				end
+
+				HumanoidRootPart.Anchored = false
+
+				return
+			end
+
+			HumanoidRootPart.Anchored = false
+
+			local Unit = CurrentCamera.CFrame.LookVector.Unit
+
+			HumanoidRootPart.AssemblyLinearVelocity = Vector3.zero
+			HumanoidRootPart.AssemblyLinearVelocity = Unit * n3
+			HumanoidRootPart.CFrame = CFrame.lookAt(HumanoidRootPart.Position, HumanoidRootPart.Position + Unit, Vector3.yAxis)
+
+			return
+		end
+
+		return
+	end
+end)
+task.spawn(function()
+	while true do
+		if not u50 then
+			task.wait()
+		else
+			local v234 = workspace:FindFirstChild("Map") and (workspace.Map:FindFirstChild("Ingame") and workspace.Map.Ingame:FindFirstChild("Map"))
+
+			if v234 then
+				for _, child in pairs(v234:GetChildren()) do
+					if child:IsA("Model") and child.Name == "Generator" then
+						local v237 = child:FindFirstChild("Remotes") and child.Remotes:FindFirstChild("RE")
+
+						if v237 then
+							v237:FireServer()
+						end
+					end
+				end
+			end
+
+			task.wait(n2 or 2.5)
+		end
+	end
+end)
+task.spawn(function()
+	while true do
+		local v238 = workspace:FindFirstChild("Map") and (workspace.Map:FindFirstChild("Ingame") and workspace.Map.Ingame:FindFirstChild("Map"))
+
+		if v238 then
+			for _, child in pairs(v238:GetChildren()) do
+				if child:IsA("Model") and child.Name == "Generator" then
+					local v241 = child:FindFirstChild("GeneratorHighlight") or Instance.new("Highlight")
+
+					v241.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+					v241.FillTransparency = 1
+					v241.OutlineColor = Color3.new(1, 0, 0):Lerp(Color3.new(0, 1, 0), child.Progress.Value / 100)
+					v241.Name = "GeneratorHighlight"
+					v241.Parent = child
+
+					if not u51 then
+						v241:Destroy()
+					end
+				end
+			end
+		end
+
+		task.wait()
+	end
+end)
+
+local Killers = workspace.Players.Killers
+local ChildAdded = workspace.Hitboxes.ChildAdded
+local u85 = Part
+local u86 = LocalPlayer
+
+ChildAdded:Connect(function(p39)
+	if p39:IsA("BasePart") then
+		local v243 = false
+
+		for _, v in pairs(workspace:GetPartsInPart(u85)) do
+			if v == p39 then
+				v243 = true
+			end
+		end
+
+		if v243 then
+			local v246 = false
+
+			for _, child in pairs(Killers:GetChildren()) do
+				if child ~= u86.Character and string.find(p39.Name, game.Players:GetPlayerFromCharacter(child).Name) then
+					v246 = true
+				end
+			end
+
+			if v246 then
+				game.ReplicatedStorage.Modules.Network.RemoteEvent:FireServer("UseActorAbility", { buffer.fromstring('"Block"') })
+			end
+		end
+	end
+end)
+
+local _ = {
+	MassInfection = 2.5,
+	Entanglement = 1,
+}
+local t10 = {
+	"rbxassetid://126896426760253",
+	"rbxassetid://98456918873918",
+	"",
+}
+local u89 = t10
+local u90 = RunService
+
+if LocalPlayer.Character then
+	local Character2 = LocalPlayer.Character
+	local HumanoidRootPart2 = Character2.HumanoidRootPart
+	local AnimationPlayed = Character2.Humanoid.AnimationPlayed
+	local u94 = t10
+	local u95 = HumanoidRootPart2
+	local u96 = RunService
+
+	AnimationPlayed:Connect(function(p40)
+		if table.find(u94, p40.Animation.AnimationId) then
+			u95.Anchored = true
+
+			local PreSimulation4 = u96.PreSimulation
+			local u255 = p40
+
+			PreSimulation4:Connect(function()
+				if u255.IsPlaying then
+					u95.CFrame = CFrame.new(u95.Position) * workspace.CurrentCamera.CFrame.Rotation
+				end
+			end)
+			p40.Ended:Once(function()
+				u95.Anchored = false
+			end)
+		end
+	end)
+end
+
+LocalPlayer.CharacterAdded:Connect(function(character)
+	local HumanoidRootPart3 = character.HumanoidRootPart
+	local AnimationPlayed = character.Humanoid.AnimationPlayed
+	local u252 = HumanoidRootPart3
+
+	AnimationPlayed:Connect(function(p41)
+		if table.find(u89, p41.Animation.AnimationId) then
+			u252.Anchored = true
+
+			local PreSimulation5 = u90.PreSimulation
+			local u362 = p41
+
+			PreSimulation5:Connect(function()
+				if u362.IsPlaying then
+					u252.CFrame = CFrame.new(u252.Position) * workspace.CurrentCamera.CFrame.Rotation
+				end
+			end)
+			p41.Ended:Once(function()
+				u252.Anchored = false
+			end)
+		end
+	end)
+end)
+
+local CurrentCamera = workspace.CurrentCamera
+local Players = workspace:FindFirstChild("Players")
+local u99 = Players and Players:FindFirstChild("Killers")
+local u100 = Players and Players:FindFirstChild("Survivors")
+local t11 = {}
+local t12 = {}
+local u105 = LocalPlayer
+local u106 = t12
+
+local function u107(p42)
+	if p42 ~= u105.Character then
+		local v261 = p42:FindFirstChild("67nskESP")
+
+		if not v261 or not v261:IsA("Highlight") then
+			local Highlight = Instance.new("Highlight")
+
+			Highlight.Name = "67nskESP"
+			Highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			Highlight.FillTransparency = 1
+			Highlight.Parent = p42
+			u106[p42] = Highlight
+
+			return Highlight
+		end
+
+		u106[p42] = v261
+		v261.FillTransparency = 1
+		v261.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+
+		return v261
+	end
+end
+
+local u108 = t11
+local u109 = t12
+
+local function u110()
+	for k, v in pairs(u108) do
+		if not k.Parent then
+			local _pcall = pcall
+			local u266 = v
+
+			pcall(function()
+				u266.Visible = false
+				u266:Remove()
+			end)
+			u108[k] = nil
+		end
+	end
+
+	for k, v in pairs(u109) do
+		if not k.Parent then
+			local _pcall = pcall
+			local u270 = v
+
+			pcall(function()
+				u270:Destroy()
+			end)
+			u109[k] = nil
+		end
+	end
+end
+
+local PlayerRemoving = game.Players.PlayerRemoving
+local u112 = t11
+local u113 = t12
+
+PlayerRemoving:Connect(function(p43)
+	if u112[p43] then
+		local u273 = p43
+
+		pcall(function()
+			u112[u273]:Remove()
+		end)
+		u112[p43] = nil
+	end
+
+	if u113[p43] then
+		local u275 = p43
+
+		pcall(function()
+			u113[u275]:Destroy()
+		end)
+		u113[p43] = nil
+	end
+end)
+
+local RenderStepped = RunService.RenderStepped
+local u115 = t11
+local u116 = t12
+local u117 = LocalPlayer
+
+RenderStepped:Connect(function()
+	local v276 = workspace:FindFirstChild("Map") and (workspace.Map:FindFirstChild("Ingame") and workspace.Map.Ingame:FindFirstChild("Map"))
+
+	if u63 then
+		local vector2 = Vector2.new(CurrentCamera.ViewportSize.X / 2, CurrentCamera.ViewportSize.Y)
+
+		if u100 then
+			for _, child in pairs(u100:GetChildren()) do
+				if child:FindFirstChild("HumanoidRootPart") then
+					local HumanoidRootPart4 = child.HumanoidRootPart
+					local v281, v282 = CurrentCamera:WorldToViewportPoint(HumanoidRootPart4.Position)
+					local v284
+
+					if child ~= u117.Character then
+						v284 = u115[child]
+
+						if not v284 then
+							v284 = Drawing.new("Line")
+							v284.Thickness = 1
+							v284.Color = color3_2
+							v284.ZIndex = 1
+							v284.Visible = false
+							u115[child] = v284
+						end
+					else
+						v284 = nil
+					end
+
+					if v284 then
+						v284.From = vector2
+						v284.To = Vector2.new(v281.X, v281.Y)
+						v284.Color = color3_2
+						v284.ZIndex = 1
+						v284.Visible = v281.Z > 0
+
+						local v285 = u107(child)
+
+						v285.OutlineColor = color3_2
+						v285.OutlineTransparency = n4
+						v285.Enabled = v282 and v281.Z > 0
+					end
+				end
+			end
+		end
+
+		if u99 then
+			for _, child in pairs(u99:GetChildren()) do
+				if child:FindFirstChild("HumanoidRootPart") then
+					local HumanoidRootPart5 = child.HumanoidRootPart
+					local v289, v290 = CurrentCamera:WorldToViewportPoint(HumanoidRootPart5.Position)
+					local v292
+
+					if child ~= u117.Character then
+						v292 = u115[child]
+
+						if not v292 then
+							v292 = Drawing.new("Line")
+							v292.Thickness = 1
+							v292.Color = color3
+							v292.ZIndex = 2
+							v292.Visible = false
+							u115[child] = v292
+						end
+					else
+						v292 = nil
+					end
+
+					if v292 then
+						v292.From = vector2
+						v292.To = Vector2.new(v289.X, v289.Y)
+						v292.Color = color3
+						v292.ZIndex = 2
+						v292.Visible = v289.Z > 0
+
+						local v293 = u107(child)
+
+						v293.OutlineColor = color3
+						v293.OutlineTransparency = n4
+						v293.Enabled = v290 and v289.Z > 0
+					end
+				end
+			end
+		end
+
+		if v276 then
+			for _, child in pairs(v276:GetChildren()) do
+				if child:IsA("Tool") and child:FindFirstChild("ItemRoot") then
+					local ItemRoot = child.ItemRoot
+					local v297, _ = CurrentCamera:WorldToViewportPoint(ItemRoot.Position)
+					local v300
+
+					if child ~= u117.Character then
+						v300 = u115[child]
+
+						if not v300 then
+							v300 = Drawing.new("Line")
+							v300.Thickness = 1
+							v300.Color = color3_3
+							v300.ZIndex = 0
+							v300.Visible = false
+							u115[child] = v300
+						end
+					else
+						v300 = nil
+					end
+
+					if v300 then
+						v300.From = vector2
+						v300.To = Vector2.new(v297.X, v297.Y)
+						v300.Color = color3_3
+						v300.ZIndex = 0
+						v300.Visible = v297.Z > 0
+					end
+				end
+			end
+		end
+
+		u110()
+
+		return
+	end
+
+	for _, v in pairs(u115) do
+		v.Visible = false
+	end
+
+	for _, v in pairs(u116) do
+		if v.Parent then
+			v.Enabled = false
+		end
+	end
+end)
+
+local t13 = {
+	["rbxassetid://126830014841198"] = "rbxassetid://130254228409927",
+	["rbxassetid://126355327951215"] = "rbxassetid://137403501678727",
+	["rbxassetid://85591573377728"] = "rbxassetid://125740920231913",
+	["rbxassetid://86451881483688"] = "rbxassetid://75804462760596",
+	["rbxassetid://109875321916742"] = "rbxassetid://75804462760596",
+	["rbxassetid://84525150536125"] = "rbxassetid://96591842139683",
+	["rbxassetid://75595031025056"] = "rbxassetid://109119993508641",
+	["rbxassetid://125119944753086"] = "rbxassetid://96591842139683",
+}
+local u119 = false
+local u120 = t13
+
+if LocalPlayer.Character then
+	local Humanoid2 = LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+
+	if Humanoid2 then
+		local AnimationPlayed = Humanoid2.AnimationPlayed
+		local u123 = t13
+		local u124 = Humanoid2
+
+		AnimationPlayed:Connect(function(p44)
+			if u44 then
+				local v310 = p44.Animation and p44.Animation.AnimationId
+				local v311 = u123[v310]
+
+				if v310 == "rbxassetid://125740920231913" then
+					p44.Ended:Once(function()
+						for _, v in ipairs(u124:GetPlayingAnimationTracks()) do
+							if v.Animation.AnimationId == "rbxassetid://95939236092784" then
+								v:AdjustWeight(0.0001)
+
+								local Animation4 = Instance.new("Animation")
+
+								Animation4.AnimationId = "rbxassetid://75804462760596"
+
+								local track3 = u124:LoadAnimation(Animation4)
+
+								track3:AdjustWeight(10)
+								track3:Play()
+								track3:AdjustSpeed(0)
+
+								local Ended = v.Ended
+								local u377 = track3
+
+								Ended:Once(function()
+									if u377.IsPlaying then
+										u377:Stop()
+									end
+								end)
+							end
+						end
+					end)
+				end
+
+				if v311 then
+					if u119 and v311 == "rbxassetid://75804462760596" then
+						v311 = "rbxassetid://95939236092784"
+					end
+
+					local Animation5 = Instance.new("Animation")
+
+					Animation5.AnimationId = v311
+
+					local track4 = u124:LoadAnimation(Animation5)
+
+					p44:AdjustWeight(0.0001)
+					track4:AdjustWeight(10)
+					track4:Play()
+
+					if Animation5.AnimationId == "rbxassetid://75804462760596" then
+						track4:AdjustSpeed(0)
+					end
+
+					if v311 ~= "rbxassetid://125740920231913" then
+						local Stopped = p44.Stopped
+						local u315 = track4
+
+						Stopped:Connect(function()
+							if u315.IsPlaying then
+								u315:Stop()
+							end
+						end)
+
+						local Destroying = p44.Destroying
+						local u317 = track4
+
+						Destroying:Connect(function()
+							if u317.IsPlaying then
+								u317:Stop()
+							end
+						end)
+
+						return
+					end
+
+					u119 = true
+					p44.Ended:Once(function()
+						u119 = false
+					end)
+				end
+
+				return
+			end
+		end)
+	end
+end
+
+LocalPlayer.CharacterAdded:Connect(function(character)
+	local Humanoid3 = character:FindFirstChildOfClass("Humanoid")
+
+	if Humanoid3 then
+		local AnimationPlayed = Humanoid3.AnimationPlayed
+		local u308 = Humanoid3
+
+		AnimationPlayed:Connect(function(p45)
+			if u44 then
+				local v364 = p45.Animation and p45.Animation.AnimationId
+				local v365 = u120[v364]
+
+				if v364 == "rbxassetid://125740920231913" then
+					p45.Ended:Once(function()
+						for _, v in ipairs(u308:GetPlayingAnimationTracks()) do
+							if v.Animation.AnimationId == "rbxassetid://95939236092784" then
+								v:AdjustWeight(0.0001)
+
+								local Animation6 = Instance.new("Animation")
+
+								Animation6.AnimationId = "rbxassetid://75804462760596"
+
+								local track5 = u308:LoadAnimation(Animation6)
+
+								track5:AdjustWeight(10)
+								track5:Play()
+								track5:AdjustSpeed(0)
+
+								local Ended = v.Ended
+								local u390 = track5
+
+								Ended:Once(function()
+									if u390.IsPlaying then
+										u390:Stop()
+									end
+								end)
+							end
+						end
+					end)
+				end
+
+				if v365 then
+					if u119 and v365 == "rbxassetid://75804462760596" then
+						v365 = "rbxassetid://95939236092784"
+					end
+
+					local Animation7 = Instance.new("Animation")
+
+					Animation7.AnimationId = v365
+
+					local track6 = u308:LoadAnimation(Animation7)
+
+					p45:AdjustWeight(0.0001)
+					track6:AdjustWeight(10)
+					track6:Play()
+
+					if Animation7.AnimationId == "rbxassetid://75804462760596" then
+						track6:AdjustSpeed(0)
+					end
+
+					if v365 ~= "rbxassetid://125740920231913" then
+						local Stopped = p45.Stopped
+						local u369 = track6
+
+						Stopped:Connect(function()
+							if u369.IsPlaying then
+								u369:Stop()
+							end
+						end)
+
+						local Destroying = p45.Destroying
+						local u371 = track6
+
+						Destroying:Connect(function()
+							if u371.IsPlaying then
+								u371:Stop()
+							end
+						end)
+
+						return
+					end
+
+					u119 = true
+					p45.Ended:Once(function()
+						u119 = false
+					end)
+				end
+
+				return
+			end
+		end)
+
+		return
+	end
+end)
+
+local t14 = {
+	["rbxassetid://83829782357897"] = "rbxassetid://126171487400618",
+	["rbxassetid://131430497821198"] = "rbxassetid://83685305553364",
+	["rbxassetid://119181003138006"] = "rbxassetid://99030950661794",
+	["rbxassetid://116996902830888"] = "rbxassetid://78583699549296",
+	["rbxassetid://119429069577280"] = "rbxassetid://108757133541940",
+}
+local u126 = t14
+
+if LocalPlayer.Character then
+	local Humanoid4 = LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+
+	if Humanoid4 then
+		local AnimationPlayed = Humanoid4.AnimationPlayed
+		local u129 = t14
+		local u130 = Humanoid4
+
+		AnimationPlayed:Connect(function(p46)
+			if u45 then
+				local v323 = u129[p46.Animation and p46.Animation.AnimationId]
+
+				if v323 then
+					local Animation8 = Instance.new("Animation")
+
+					Animation8.AnimationId = v323
+
+					local track7 = u130:LoadAnimation(Animation8)
+
+					p46:AdjustWeight(0.0001)
+					track7:AdjustWeight(10)
+					track7:Play()
+				end
+
+				return
+			end
+		end)
+	end
+end
+
+LocalPlayer.CharacterAdded:Connect(function(character)
+	local Humanoid5 = character:FindFirstChildOfClass("Humanoid")
+
+	if Humanoid5 then
+		local AnimationPlayed = Humanoid5.AnimationPlayed
+		local u321 = Humanoid5
+
+		AnimationPlayed:Connect(function(p47)
+			if u45 then
+				local v379 = u126[p47.Animation and p47.Animation.AnimationId]
+
+				if v379 then
+					local Animation9 = Instance.new("Animation")
+
+					Animation9.AnimationId = v379
+
+					local track8 = u321:LoadAnimation(Animation9)
+
+					p47:AdjustWeight(0.0001)
+					track8:AdjustWeight(10)
+					track8:Play()
+				end
+
+				return
+			end
+		end)
+
+		return
+	end
+end)
+
+local CharacterAdded = LocalPlayer.CharacterAdded
+local u132 = LocalPlayer
+
+CharacterAdded:Connect(function(p48)
+	repeat
+		task.wait()
+	until not workspace.Misc:FindFirstChild(u132.Name .. "ActorRig")
+
+	task.wait(1)
+	print("attempt to spawn correctly")
+
+	local HumanoidRootPart6 = p48:FindFirstChild("HumanoidRootPart")
+	local v328 = p48.Parent == workspace.Players.Killers
+	local v329 = p48.Parent == workspace.Players.Survivors
+	local v330 = p48.Parent == workspace.Players.Spectating
+	local Map = workspace.Map.Ingame:FindFirstChild("Map")
+
+	if not v330 then
+		print("not spec")
+
+		if not Map then
+			print("map not exist")
+			HumanoidRootPart6.CFrame = workspace.Map.Lobby.Spawn.CFrame
+		else
+			print("map exist")
+
+			if v328 then
+				print("is killer")
+
+				local children = workspace.Map.Ingame.Map.SpawnPoints.Killers:GetChildren()
+
+				HumanoidRootPart6.CFrame = children[math.random(1, #children)].CFrame
+
+				return
+			end
+
+			if v329 then
+				print("is survivor")
+
+				local children = workspace.Map.Ingame.Map.SpawnPoints.Survivor:GetChildren()
+
+				HumanoidRootPart6.CFrame = children[math.random(1, #children)].CFrame
+
+				return
+			end
+		end
+
+		return
+	end
+
+	print("is spec")
+	HumanoidRootPart6.CFrame = workspace.Map.Lobby.Spawn.CFrame
+end)
